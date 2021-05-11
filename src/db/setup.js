@@ -9,7 +9,7 @@ const { MONGO_URI } = process.env;
 
 
 // 1
-const connectDB = () => {
+module.exports = function() {
     mongoose.connect(MONGO_URI, {
         useNewUrlParser: true,
         useCreateIndex: true,
@@ -18,7 +18,6 @@ const connectDB = () => {
     })
     .then(() => {
         console.log('MongoDB connected...');
-
     })
     .catch((err) => {
         console.error(err.message);
@@ -28,4 +27,4 @@ const connectDB = () => {
 }
 
 
-module.exports = connectDB;
+

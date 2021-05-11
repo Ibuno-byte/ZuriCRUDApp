@@ -10,29 +10,19 @@
 
 // 1
 const express = require('express');
-const connectDB = require('./db');
 require('dotenv').config(); // to use the env variables in dotenv
 const { PORT } = process.env;
-
-
-
-// 2
-connectDB();
-
-// 3
-const app = express();
-
-// 4
-app.use(express.json({ extended: false }));
-
-
-// 5
-app.get('/', (req, res) => res.json({ message: 'CRUD App'}))
-
-
-// PORT
 const port = process.env.PORT || PORT;
+const app = express();
+const dbSetup = require('./db/setup');
+const infoRoutes = require('./routes/infoRoutes');
 
+
+app.use(express.json());
+
+dbSetup();
+
+app.use(infoRoutes)
 
 // Listen to connection
 app.listen(port, () => console.log(`app running on port ${port}`));
