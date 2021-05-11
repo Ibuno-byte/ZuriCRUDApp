@@ -14,8 +14,8 @@ require('dotenv').config(); // to use the env variables in dotenv
 const { PORT } = process.env;
 const port = process.env.PORT || PORT;
 const app = express();
-const dbSetup = require('./db/setup');
-const infoRoutes = require('./routes/infoRoutes');
+const dbSetup = require('./src/db/setup');
+const infoRoutes = require('./src/routes/infoRoutes');
 
 
 app.use(express.json());
