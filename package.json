@@ -2,7 +2,7 @@
   "name": "ZuriCRUDApp",
   "version": "1.0.0",
   "description": "This is a sample CRUD app assignment given by the Zuri Program",
-  "main": "src/server.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "server.js"
