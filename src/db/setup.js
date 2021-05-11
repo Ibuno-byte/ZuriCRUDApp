@@ -4,8 +4,9 @@
 */
 
 const mongoose = require('mongoose');
-require('dotenv').config()
-const { MONGO_URI } = process.env;
+//require('dotenv').config()
+//const { MONGO_URI } = process.env;
+const MONGO_URI ='mongodb+srv://ibuno123:ibuno123@cluster0.ve7bv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
 
 // 1
@@ -15,14 +16,12 @@ module.exports = function() {
         useCreateIndex: true,
         useUnifiedTopology: true,
         useFindAndModify: false
-    })
-    .then(() => {
-        console.log('MongoDB connected...');
-    })
-    .catch((err) => {
-        console.error(err.message);
-
-        process.exit(1);
+    }, (err) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log('MongoDB connected')
+        }
     })
 }
 
