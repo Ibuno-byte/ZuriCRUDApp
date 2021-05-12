@@ -1,3 +1,8 @@
+/*
+* 1. create function for GET, POST, PUT and DELETE methods
+* 2. export functions
+*/
+
 const Info = require('../models/info');
 
 

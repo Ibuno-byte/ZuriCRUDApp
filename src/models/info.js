@@ -1,3 +1,10 @@
+/*
+* 1. introduce mongoose
+* 2. model a new schema with mongoose
+* 3. save model in a variable
+* 4. export model
+*/
+
 const mongoose = require('mongoose')
 
 const infoSchema = new mongoose.Schema({

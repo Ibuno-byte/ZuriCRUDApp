@@ -1,3 +1,11 @@
+/*
+* 1. create express server
+* 2. initialize router function in express
+* 3. import api callback functions
+* 4. create routes for post, get(single & all), put and delete methods
+* 5. export routes
+*/
+
 const express = require('express');
 const router = express.Router();
 const infoCtrl = require('../controllers/infoController');

@@ -1,6 +1,6 @@
 /*
 * 1. Create a connection function for mongodb using mongoose
-* 2. Start a local mongodb server connection
+* 2. Start a mongodb server connection
 */
 
 const mongoose = require('mongoose');
