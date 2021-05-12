@@ -21,6 +21,18 @@ The 'controllers' subfolder holds the functions (5 in number) attachable to our 
 
 The App is run from "server.js" on the root repository. The app listens via express module for connection on the enabled port when "server.js" is run then database connection and routes are awakened.
 
+# Route Documentation
+
+router.post('/info', infoCtrl.createNewInfo) - This creates a new record.
+
+router.get('/info', infoCtrl.fetchInfo) - This retrieves all existing records.
+
+router.get('/info/:id', infoCtrl.fetchSingleInfo) - This retrieves a specific record.
+
+router.put('/info/:id', infoCtrl.updateSingleInfo) - This updates a specific record.
+
+router.delete('/info/:id', infoCtrl.deleteSingleInfo) - This deletes a specific record.
+
 # App Deployment
 
 Visit my CRUD application hosted on Herou Dev Center via th link below
