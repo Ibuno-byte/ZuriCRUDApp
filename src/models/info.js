@@ -9,7 +9,7 @@ const mongoose = require('mongoose')
 
 const infoSchema = new mongoose.Schema({
     name: {type: String, required: true},
-    email: {type: String, lowercase: true, required: [true, "can't be blank"], match: [/\S+@\S+\.\S+/, 'is invalid'], index: true},
+    email: {type: String, lowercase: true, required: [true, "can't be blank"], match: [/\S+@\S+\.\S+/, 'is invalid'], index: true, unique: true, dropDups: true},
     country: {type: String, required: true}
 })
 
