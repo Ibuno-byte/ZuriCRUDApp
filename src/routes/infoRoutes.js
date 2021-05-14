@@ -13,7 +13,7 @@ const infoCtrl = require('../controllers/infoController');
 router.post('/info', infoCtrl.createNewInfo)
 
 
-router.get('/info', infoCtrl.fetchInfo)
+router.get('/', infoCtrl.fetchInfo)
 
 
 router.get('/info/:id', infoCtrl.fetchSingleInfo)
