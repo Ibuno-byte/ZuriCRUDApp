@@ -25,7 +25,7 @@ The App is run from "server.js" on the root repository. The app listens via expr
 
 router.post('/info', infoCtrl.createNewInfo) - This creates a new record.
 
-router.get('/info', infoCtrl.fetchInfo) - This retrieves all existing records.
+router.get('/', infoCtrl.fetchInfo) - This retrieves all existing records.
 
 router.get('/info/:id', infoCtrl.fetchSingleInfo) - This retrieves a specific record.
 
