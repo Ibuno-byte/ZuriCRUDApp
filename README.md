@@ -36,4 +36,4 @@ router.delete('/info/:id', infoCtrl.deleteSingleInfo) - This deletes a specific 
 # App Deployment
 
 Visit my CRUD application hosted on Herou Dev Center via th link below
-https://identification-info.herokuapp.com/info
+https://identification-info.herokuapp.com
